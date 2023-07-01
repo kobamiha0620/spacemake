@@ -1,0 +1,120 @@
+@use "./variable"as var;
+
+
+.faq {
+    background: var.$pink;
+    padding: 50px 0 60px;
+    &__ttl{
+        @include var.bg;
+        margin: 0 auto 23px;
+        background-image: url('../../img/ttl_faq.svg');
+        width: 162px;
+        height: 42px;
+    }
+    &__txt{
+        font-weight: 700;
+        font-size: 22px;
+        color: #FFF;
+        max-width: 350px;
+        margin: 0 auto 30px; 
+        line-height: 2;
+        text-align: center;
+    }
+    &__img{
+        display: block;
+        width: 312px;
+        margin: 0 auto;
+    }
+    &__accordion {
+        max-width: 372px;
+        margin: 0 auto;
+        background: url('../../img/dotted.svg');
+        background-size: 9px 3px;
+        background-repeat: repeat-x;
+        background-position: 0 bottom;
+        &--ttl {
+            position: relative;
+            color: #fff;
+            @include var.fz(19);
+            line-height: 1.6;
+            padding:30px 30px 30px 52px;
+            background-image: url('../../img/icon_faq-q.svg');
+            background-size: 35px 35px;
+            background-repeat: no-repeat;
+            background-position: left 0 top 35px;
+            cursor: pointer;
+        }
+
+        &--cnt {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.2s ease max-height;
+            margin-left: 0;
+            &inner{
+
+                @include var.fz(19);
+                padding:0 30px 30px 52px;
+                background-image: url('../../img/icon_faq-a.svg');
+                background-size: 35px 35px;
+                background-repeat: no-repeat;
+                background-position: left 0 top 5px;
+                margin: 0;
+            }
+            p {
+                margin: 0;
+                @include var.fz(19);
+                color: #FFF;
+            }
+        }
+    }
+    @media screen and (max-width: var.$spbp) {
+        padding: 12vw 0 14vw;
+        &__ttl{
+            margin: 0 auto 7vw;
+            width: 37.5vw;
+            height: 10vw;
+        }
+        &__txt{
+            font-size: 19px;
+            max-width: 80vw;
+            margin: 0 auto 40px; 
+            line-height: 2;
+        }
+        &__img{
+            display: block;
+            width: 73vw;
+            margin: 0 auto;
+        }
+        &__accordion {
+            max-width: 86vw;
+            &--ttl {
+                @include var.fz(14);
+                line-height: 1.6;
+                padding: 22px 22px 22px 38px;
+                background-size: 26px 26px;
+                background-repeat: no-repeat;
+                background-position: left 0 top 22px;
+                cursor: pointer;
+            }
+    
+            &--cnt {
+                max-height: 0;
+                overflow: hidden;
+                transition: 0.2s ease max-height;
+                margin-left: 0;
+                &inner{
+                    @include var.fz(14);
+                    padding: 0 22px 22px 38px;
+                    background-size: 26px 26px;
+                    background-position: left 0 top 0;
+
+                }
+                p {
+                    @include var.fz(14);
+                }
+            }
+        }
+    }
+}
+
+// @include var.webpBg('.footer__anotherlogo', var.$imgpath+'another_logo', 'png');

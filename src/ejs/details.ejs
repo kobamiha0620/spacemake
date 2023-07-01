@@ -1,0 +1,98 @@
+ <%
+// 以下の設定値を記入のこと
+
+var pageinit = {
+ttl : 'SPACE MAKE 1 on 1 ライブトークサービス' ,
+keywords : '' ,
+description : 'SPACE MAKEは、あなたとタレントやアーティストだけの空間を創造する1on1オンライントーク(ビデオ通話)サービスです。' ,
+ogurl : '' ,
+path: '',
+ogimage : '' ,
+path : '' ,
+category : ['details'] ,
+pagename : '',
+css: [],
+js:[]
+};
+%> 
+  
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="<%= pageinit.ogurl %>">
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
+
+<meta name="description" content="<%= pageinit.description %>"/>
+
+<meta property="og:url" content="<%= pageinit.ogurl %>"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="<%= pageinit.ttl %>"/>
+<meta property="og:description" content="<%= pageinit.description %>"/>
+<meta property="og:site_name" content="<%= pageinit.ttl %>"/>
+<meta property="og:image" content="./img/zipangopera-ogp.jpg"/>
+
+<!-- favicon -->
+<link rel="icon" href="./img/favicon.ico" sizes="any">
+
+<!-- Google Font -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'inn0hbw',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<!-- Google Font -->
+
+<link rel="stylesheet" href="./assets/css/style.css">
+
+<!-- GA4 -->
+<!-- Google tag (gtag.js) -->
+
+<title><%= pageinit.ttl %></title>
+
+</head>
+
+
+<body id="details">
+  <div class="fluidtext"></div>
+  <div class="fluidtext02"></div>
+
+<%- include('./module/header'); %>
+
+<main class="main">
+    <div class="fvdetails">
+        <img src="./img/fv_details.svg" alt="ご利用いただく前に、注意点をご確認ください" width="275px" height="179px">
+    </div>
+
+  <%- include('./module/policy'); %>
+
+
+</main>
+
+<%- include('./module/footer'); %>
+
+
+
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+    
+
+  

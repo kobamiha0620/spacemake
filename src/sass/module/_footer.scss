@@ -1,0 +1,126 @@
+@use "./variable"as var;
+
+.contact{
+    background: var.$blue;
+    padding: 50px 0 132px;
+    &__ttl{
+        @include var.bg;
+        margin: 0 auto 23px;
+        background-image: url('../../img/ttl_contact.svg');
+        width: 162px;
+        height: 42px;
+    }
+    &__txt{
+        font-weight: 700;
+        font-size: 22px;
+        color: #FFF;
+        text-align: center;
+        margin: 0 auto 52px; 
+        line-height: 2;
+    }
+    &__txt2{
+        color: #FFF;
+        @include var.fz(18);
+        line-height: 1.6;
+        max-width: 365px;
+        margin: 0 auto;
+    }
+
+    &__mail{
+        font-size: 0;
+        display: block;
+        margin: 32px auto 0;
+        width: 364px;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+        
+    
+    @media screen and (max-width: var.$spbp) {
+        padding: 12vw 0 32vw;
+        &__ttl{
+            margin: 0 auto 7vw;
+            width: 37.5vw;
+            height: 10vw;
+        }
+        &__txt{
+            font-size: 19px;
+            max-width: 80vw;
+            margin: 0 auto 11vw; 
+            line-height: 2;
+        }
+        &__txt2{
+            @include var.fz(14);
+            line-height: 1.6;
+            max-width: 85vw;
+            margin: 0 auto 8vw;
+        }
+    
+        &__mail{
+            font-size: 0;
+            display: block;
+            margin: 32px auto 0;
+            width: 85vw;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+         
+    }
+}
+
+
+
+.footer{
+    position: relative;
+    background-color: var.$blk;
+    padding: 108px 0 100px;
+    &__btn{
+        @include var.bg;
+        background: url('../../img/footer_top.svg');
+        width: 107px;
+        height: 48px;
+        position: absolute;
+        top: -29px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+    } 
+    &__txt{
+        text-align: center;
+        color: #FFF;
+        @include var.fz(12);
+        margin: 0 auto 25px;
+        
+    }
+    &__txt2{
+        @include var.bg;
+        background: url('../../img/footer_txt.svg');
+        width: 374px;
+        height: 91px;
+        margin: 0 auto;
+    }
+    //footer
+    @media screen and (max-width: var.$spbp) {
+        padding: 16.8vw 0 14vw;
+        &__txt{
+            @include var.fz(9);
+            margin: 0 auto 6vw;
+        }
+        &__txt2{
+            @include var.bg;
+            background: url('../../img/footer_txt.svg');
+            width: 87vw;
+            height: 21vw;
+            margin: 0 auto;
+        }
+    }
+}

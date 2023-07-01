@@ -1,0 +1,62 @@
+@use "./variable"as var;
+
+
+.header {
+    display: block;
+    &__blc{
+        overflow: hidden;
+        padding: 18px 26px 18px 30px;
+    }
+    &__twitter{
+        @include var.bg;
+        background-image: url('../../img/icon_twitter.svg');
+        width: 26px;
+        height: 22px;
+        float: right;
+    }
+    &__top{
+        @include var.bg;
+        background-image: url('../../img/icon_top.svg');
+        width: 50px;
+        height: 22px;
+        float: left;
+    }
+    &__fv{
+        @include var.bg;
+        background-image: url('../../img/fv.svg');
+        width: 428px;
+        height: 242px;
+        margin: 90px auto 25px;
+    }
+    //sp
+    @media screen and (max-width: var.$spbp) {
+        &__blc{
+            padding: 22px 3vw 18px;
+        }
+        &__twitter{
+            width: 24px;
+            height: 20px;
+        }
+        &__top{
+            width: 47px;
+            height: 20px;
+        }
+        &__fv{
+            width: 78vw;
+            height: 47.6vw;
+            margin: 25vw auto 6vw;
+        }
+    }
+}
+
+#top{
+    .header__top{
+        display: none;
+    }
+}
+// @include var.webpBg('.header__top--txt', var.$imgpath+'pc-frame_rb', 'png');
+
+// @media screen and (max-width: var.$spbp) {
+//     @include var.webpBg('.header__top--txt', var.$imgpath+'sp-frame_rb2', 'png');
+
+// }
